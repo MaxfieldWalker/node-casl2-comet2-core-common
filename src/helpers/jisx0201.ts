@@ -11,6 +11,15 @@ export function convertToCharCode(ch: string): number {
     return code;
 }
 
+export function convertToCharCodes(s: string): Array<number> {
+    const r = [];
+    for (const c of s) {
+        r.push(convertToCharCode(c));
+    }
+
+    return r;
+}
+
 /**
  * JIS X 0201でサポートされる文字列かどうかを返します
  */
