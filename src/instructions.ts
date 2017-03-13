@@ -2,7 +2,10 @@
 
 export enum ArgumentType {
     none = 0,
-    other = 1,
+    label_START = 1,
+    decimal_DS = 2,
+    constants_DC = 3,
+
     adr_r2 = 10,
     r = 11,
     adr_adr = 12,
@@ -33,10 +36,10 @@ function createInstructionInfo(inst: string, type: ArgumentType, code: number) {
 
 export const instructionsInfo: Array<InstructionInfo> = [
     // アセンブラ命令
-    { instructionName: "START", argumentType: ArgumentType.other, code: -1, type: InstructionType.Assembler, documentation: "プログラムの先頭を定義 プログラムの実行開始番地を定義 他のプログラムで参照する入口名を定義" },
+    { instructionName: "START", argumentType: ArgumentType.label_START, code: -1, type: InstructionType.Assembler, documentation: "プログラムの先頭を定義 プログラムの実行開始番地を定義 他のプログラムで参照する入口名を定義" },
     { instructionName: "END", argumentType: ArgumentType.none, code: -1, type: InstructionType.Assembler, documentation: "プログラムの終わりを明示" },
-    { instructionName: "DS", argumentType: ArgumentType.other, code: -1, type: InstructionType.Assembler, documentation: "領域を確保" },
-    { instructionName: "DC", argumentType: ArgumentType.other, code: -1, type: InstructionType.Assembler, documentation: "定数を定義" },
+    { instructionName: "DS", argumentType: ArgumentType.decimal_DS, code: -1, type: InstructionType.Assembler, documentation: "領域を確保" },
+    { instructionName: "DC", argumentType: ArgumentType.constants_DC, code: -1, type: InstructionType.Assembler, documentation: "定数を定義" },
 
     // 機械語命令
     { instructionName: "NOP", argumentType: ArgumentType.none, code: 0x00, type: InstructionType.Machine, documentation: "ノーオペレーション", },
