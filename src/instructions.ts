@@ -14,12 +14,16 @@ export enum ArgumentType {
     r1_adr_r2 = 21,
     // r1_r2 + r1_adr_r2
     r1_r2_OR_r1_adr_r2 = 41,
+
+    Unknown = 100
 }
 
 export enum InstructionType {
-    Assembler,
-    Machine,
-    Macro
+    Assembler = 0,
+    Machine = 1,
+    Macro = 2,
+
+    Unknown = 3
 }
 
 export interface InstructionInfo {
