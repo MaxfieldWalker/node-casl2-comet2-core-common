@@ -27,11 +27,11 @@ export enum InstructionType {
 }
 
 export interface InstructionInfo {
-    instructionName: string;
-    argumentType: ArgumentType;
-    code: number;
-    type: InstructionType;
-    documentation: string;
+    readonly instructionName: string;
+    readonly argumentType: ArgumentType;
+    readonly code: number;
+    readonly type: InstructionType;
+    readonly documentation: string;
 }
 
 function createInstructionInfo(inst: string, type: ArgumentType, code: number) {
