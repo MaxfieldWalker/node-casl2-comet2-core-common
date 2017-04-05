@@ -1,6 +1,6 @@
 {
   "name": "@maxfield/node-casl2-comet2-core-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CASL2/COMET2 core common library",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
