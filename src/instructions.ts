@@ -87,7 +87,7 @@ export const instructionsInfo: Array<InstructionInfo> = [
 
     // マクロ命令
     { instructionName: "IN", argumentType: ArgumentType.adr_adr, code: 0x90, type: InstructionType.Macro, documentation: "入力装置から文字データを入力" },
-    { instructionName: "OUT", argumentType: ArgumentType.adr_adr, code: 0x91, type: InstructionType.Assembler, documentation: "出力装置へ文字データを出力" },
-    { instructionName: "RPUSH", argumentType: ArgumentType.none, code: 0xA0, type: InstructionType.Assembler, documentation: "GRの内容をスタックに格納" },
-    { instructionName: "RPOP", argumentType: ArgumentType.none, code: 0xA1, type: InstructionType.Assembler, documentation: "スタックの内容をGRに格納" },
+    { instructionName: "OUT", argumentType: ArgumentType.adr_adr, code: 0x91, type: InstructionType.Macro, documentation: "出力装置へ文字データを出力" },
+    { instructionName: "RPUSH", argumentType: ArgumentType.none, code: 0xA0, type: InstructionType.Macro, documentation: "GRの内容をスタックに格納" },
+    { instructionName: "RPOP", argumentType: ArgumentType.none, code: 0xA1, type: InstructionType.Macro, documentation: "スタックの内容をGRに格納" },
 ];
