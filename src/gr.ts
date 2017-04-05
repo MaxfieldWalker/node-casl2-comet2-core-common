@@ -56,7 +56,7 @@ export interface GRInfo {
 }
 
 function createDocumentation(type: GRType): string {
-    let s = "汎用レジスタ。"
+    let s = "汎用レジスタ。";
     if (type & GRType.UsedAsIndexRegister) {
         s += "指標レジスタとして使用できます。";
     } else {
@@ -78,7 +78,7 @@ function createGRInfo(gr: GR, type: GRType): GRInfo {
     };
 }
 
-export const grsInfo: Array<GRInfo> = [
+export const grsInfo: GRInfo[] = [
     createGRInfo(GR.GR0, GRType.None),
     createGRInfo(GR.GR1, GRType.UsedAsIndexRegister),
     createGRInfo(GR.GR2, GRType.UsedAsIndexRegister),

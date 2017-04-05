@@ -38,7 +38,7 @@ function createInstructionInfo(inst: string, type: ArgumentType, code: number) {
     return { instructionName: inst, argumentType: type, code: code };
 }
 
-export const instructionsInfo: Array<InstructionInfo> = [
+export const instructionsInfo: InstructionInfo[] = [
     // アセンブラ命令
     { instructionName: "START", argumentType: ArgumentType.label_START, code: -1, type: InstructionType.Assembler, documentation: "プログラムの先頭を定義 プログラムの実行開始番地を定義 他のプログラムで参照する入口名を定義" },
     { instructionName: "END", argumentType: ArgumentType.none, code: -1, type: InstructionType.Assembler, documentation: "プログラムの終わりを明示" },

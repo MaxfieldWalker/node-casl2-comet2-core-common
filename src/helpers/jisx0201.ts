@@ -11,7 +11,7 @@ export function convertToCharCode(ch: string): number {
     return code;
 }
 
-export function convertToCharCodes(s: string): Array<number> {
+export function convertToCharCodes(s: string): number[] {
     const r = [];
     for (const c of s) {
         r.push(convertToCharCode(c));
@@ -45,7 +45,7 @@ export function convertToChar(charCode: number): string {
  * 文字コード列から文字列に変換します
  * @param charCodes 文字コードの配列
  */
-export function convertToString(charCodes: Array<number>): string {
+export function convertToString(charCodes: number[]): string {
     return charCodes.map(charCode => convertToChar(charCode)).join("");
 }
 
